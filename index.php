@@ -41,17 +41,18 @@
     <p>Ajoutez le dépot Docker: <b>sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs)stable"</b></p>
     <p>Installer Docker CE: <b>sudo apt update && sudo apt install docker-ce</b></p>
     <p>Démarrer le service Docker: <b>sudo service docker start</b></p>
+    <p>Ajouter vous au groupe d'administrateur de docker: <b>sudo groupadd docker && sudo usermod -aG docker $USER</b> puis fermer le terminal et rouvrez-le (Cette étape permet de connecter DDEV à docker)</p>
     <p>Installer Docker Compose: <b>sudo apt update && sudo apt install curl jq make acl git pass</b></br>
     puis <b>sudo curl –L "https://github.com/docker/compose/releases/download/latest/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose </b></p>
     <p>Rendre le fichier installé exécutable : <b>sudo chmod +x /usr/local/bin/docker-compose</b></p>
-    <p>Vérifier l'installation : <b>docker compose version</b></p>
+    <p>Vérifier l'installation : <b>docker compose version</b> et <b>docker ps</b></p>
 
     <h4>5.Installer DDEV</h4>
     <p><b>sudo apt update</b></br>puis</br><b>sudo apt install build-essential</b></p>
     <p>Téléchargez le script : <b>curl -O https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh</b></p>
     <p>Rendez le fichier exécutable : <b>chmod +x install_ddev.sh</b></p>
     <p>Lancez le script : <b>./install_ddev.sh</b></p>
-    <p>Vérifiez la bonne installation de DDEV : <b>ddev version</b></p>
+    <p>Vérifiez la bonne installation de DDEV : <b>ddev --version</b></p>
 
     <h3>B. Création du dossier et lancement du serveur de développement local</h3>
     <h4>1. Créer le dossier</h4>
@@ -62,7 +63,5 @@
     <p>Grâce à votre Editeur de code préféré (moi c'est vs code), créez un fichier index.php que vous placerez à la racine du dossier.
     </br>Et voilà ! (Si vous avez une erreur, vérifiez que index.php est bien à la racine de votre dossier créé, vérifiez que DDEV est lancé: (ddev start))
 </p>
-
-
 </body>
 </html>
