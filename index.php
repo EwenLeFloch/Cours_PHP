@@ -63,5 +63,53 @@
     <p>Grâce à votre Editeur de code préféré (moi c'est vs code), créez un fichier index.php que vous placerez à la racine du dossier.
     </br>Et voilà ! (Si vous avez une erreur, vérifiez que index.php est bien à la racine de votre dossier créé, vérifiez que DDEV est lancé: (ddev start))
 </p>
+<h2>Les variables</h2>
+<p>
+    &lt;?php
+    <br>&emsp; $prenom = "Pierre";
+    <br>&emsp; $age = 28;
+    <br>&emsp; echo "$prenom a $age ans";
+    <br>?&gt;
+    <br><?php
+    $prenom = "Pierre";
+    $age = 28;
+    echo "$prenom a $age ans"; 
+    ?>
+</p>
+<h3>Les types de données</h3>
+<p>Les variables peuvent stocker 8 grands types de données différentes :
+    <ul>
+        <li><b>String</b>: Les chaine de caractères</li>
+        <li><b>Integer</b>: Les nombres entiers</li>
+        <li><b>Float</b>: Les nombres décimaux</li>
+        <li><b>Boolean</b>: Les booléens (true, false)</li>
+        <li><b>Array</b>: Les tableaux</li>
+        <li><b>Object</b>: Les objets</li>
+        <li><b>NULL</b>: Le type NULL</li>
+        <li><b>Resource</b>: Les ressources</li>
+    </ul>
+
+    La valeur de la variable $prenom écrite plus tôt est une chaîne de caractères donc <b>String</b>. <br>
+    La valeur de la variable $age est quant à elle, un nombre entier donc <b>Integer</b>. <br>
+    La valeur de la variable $age2 = "29" est une chaîne de caractères. En effet, toute utilisation de guillemet ou d'apostrophe fait qu'une valeur est une chaîne de caractère. <br>
+    La fonction gettype() nous permet de connaître le type d'une valeur. <br>
+    <br>&lt;?php
+    <br>&emsp; $prenom = "Pierre";
+    <br>&emsp; $age = 28;
+    <br>&emsp; $age2 = "29";
+    <br>
+    <br>&emsp; echo "La variable \$age2 a une valeur de type : ";
+    <br>&emsp; echo gettype($age2);
+    <br>?&gt;
+    <br>
+    <?php
+    $prenom = "Pierre";
+    $age = 28;
+    $age2 = "29";
+    echo "La variable \$age2 a une valeur de type : " . gettype($age2); 
+    ?>
+</p>
+
+
 </body>
 </html>
