@@ -7,12 +7,12 @@ while (true) {
         break;
     }
 
-foreach ($insultes as $insulte) {
-    $taille = strlen($insulte);
-    $firstLetter = substr($insulte, 0, 1);
-    $replace = $firstLetter . str_repeat("*", $taille - 1);
-    $phrase = str_replace($insultes, $replace, $phrase);
-}
+    foreach ($insultes as $insulte) {
+        $taille = strlen($insulte);
+        $firstLetter = substr($insulte, 0, 1);
+        $replace = $firstLetter . str_repeat("*", $taille - 1);
+        $phrase = str_replace($insulte, $replace, $phrase);
+    }
 
-echo "$phrase \n";
+    echo "$phrase \n";
 }
