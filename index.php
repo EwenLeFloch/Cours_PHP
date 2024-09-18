@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION['role'] = ['administrateur'];
 $title = "Accueil";
 $nav = "index";
 require "src/layouts/head.php";

@@ -5,19 +5,12 @@ require "../layouts/head.php";
 require "../config.php";
 
 $datetime = $_GET['datetime'] ?? null;
-
-
 $heure = $datetime ? (int)date('G', strtotime($datetime)) : (int)date('G');
 $jour = $datetime ? (int)date('N', strtotime($datetime)) : (int)date('N');
-
-
-echo var_dump($heure);
-echo var_dump($jour);
 
 $creneaux = CRENEAUX[$jour - 1];
 $ouvert = in_creneau($heure, $creneaux);
 $color = $ouvert ? "green" : "red";
-echo var_dump($color);
 
 
 
